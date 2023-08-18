@@ -52,12 +52,24 @@ const ProductDetail = (props: any) => {
         <div style={{ display: 'flex', justifyContent: 'center', padding: '64px', minHeight: 'calc(100vh - 280px)' }}>
           <div>
             <Carousel style={{ width: '320px' }} autoplay>
-              <div>
-                <img style={{ width: '320px'}} alt="example" src={placeholderImg} />
-              </div>
-              <div>
-                <img style={{ width: '320px'}} alt="example" src={placeholderImg} />
-              </div>
+              {
+                product.images.map((image: any) => {
+                  return <div>
+                    <img style={{ width: '320px'}} alt="example" src={image} />
+                  </div>
+                })
+              }
+              {
+                product.images && product.images.length === 0 && <>
+                  <div>
+                    <img style={{ width: '320px'}} alt="example" src={placeholderImg} />
+                  </div>
+                  <div>
+                    <img style={{ width: '320px'}} alt="example" src={placeholderImg} />
+                  </div>
+                </>
+              }
+
             </Carousel>
           </div>
           <div style={{ minWidth: '360px', marginLeft: '64px' }}>

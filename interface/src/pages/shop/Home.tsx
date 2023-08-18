@@ -67,6 +67,10 @@ const HomePage = () => {
             }
           </Row>
         </div>
+
+        <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '64px' }}>
+          <Button type='primary' size='large' style={{ background: '#b91c1c' }} onClick={() => window.location.replace('/products') }>Xem tất cả sản phẩm</Button>
+        </div>
       </Layout.Content>
       <Footer></Footer>
     </Layout>

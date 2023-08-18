@@ -53,14 +53,14 @@ const ProductDetail = (props: any) => {
           <div>
             <Carousel style={{ width: '320px' }} autoplay>
               {
-                product.images.map((image: any) => {
+                product && product.images && product.images.map((image: any) => {
                   return <div>
                     <img style={{ width: '320px'}} alt="example" src={image} />
                   </div>
                 })
               }
               {
-                product.images && product.images.length === 0 && <>
+                !product || !product.images || product.images.length === 0 && <>
                   <div>
                     <img style={{ width: '320px'}} alt="example" src={placeholderImg} />
                   </div>

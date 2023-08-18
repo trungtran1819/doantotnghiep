@@ -52,7 +52,7 @@ const Header = () => {
   };
 
   return <Layout.Header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: colorBgContainer, boxShadow }}>
-    <Image style={{ height: '60px' }} preview={false} src={logoImage}></Image>
+    <a href="/"><Image style={{ height: '60px' }} preview={false} src={logoImage}></Image></a>
 
     <Search style={{ width: '240px' }} enterButton={
       <Button icon={<SearchOutlined></SearchOutlined>} style={{ background: '#b91c1c' }} type="primary" size="small"></Button>

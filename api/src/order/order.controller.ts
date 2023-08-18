@@ -53,4 +53,16 @@ export class CategoryController {
 
     return updatedOrder;
   }
+
+  @Delete(':id')
+  @UseGuards(AuthGuard)
+  async delete(@Param('id') id: string) {
+    const order = await this.orderService.getOneById(id);
+
+    if (order === null) {
+      throw new NotFoundException('Order not found');
+    }
+
+    await this.orderService.delete(id);
+  }
 }

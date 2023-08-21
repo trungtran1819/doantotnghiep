@@ -19,23 +19,23 @@ export class CreateProductRequest {
 export class UpdateProductRequest {
   @IsOptional()
   @IsString()
-  name: string;
+  name?: string;
 
   @IsOptional()
   @IsString()
-  descriptions: string;
+  descriptions?: string;
   
   @IsOptional()
   @IsArray()
-  images: string[];
+  images?: string[];
 
   @IsOptional()
   @IsInt()
-  stock: number;
+  stock?: number;
 
   @IsOptional()
   @IsInt()
-  unitPrice: number;
+  unitPrice?: number;
 }
 
 export class GetProductResponse {
